@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current:"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="100$"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="12dp"
+            android:foregroundGravity="center"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayoutHeader"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutHeader">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Bet:"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonStart"
+                app:layout_constraintStart_toEndOf="@+id/buttonStart"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_margin="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+            tools:ignore="NotSibling,UnknownId">
+
+            <ImageView
+                android:id="@+id/imageViewRoad"
+                android:layout_width="572dp"
+                android:layout_height="315dp"
+                android:layout_marginStart="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/road"/>
+
+            <SeekBar
+                android:id="@+id/seekBarOne"
+                android:layout_marginStart="5dp"
+                android:layout_width="535dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="80dp"
+                android:thumb="@drawable/car1"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewRoad"
+                app:layout_constraintHorizontal_bias="0.166"
+                app:layout_constraintStart_toStartOf="@+id/imageViewRoad"
+                app:layout_constraintTop_toTopOf="@+id/imageViewRoad"/>
+
+            <SeekBar
+                android:id="@+id/seekBarTwo"
+                android:layout_width="535dp"
+                android:layout_height="54dp"
+                android:thumb="@drawable/car2"
+                app:layout_constraintEnd_toEndOf="@+id/seekBarOne"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/seekBarOne"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarOne"
+                android:layout_marginTop="5dp"/>
+
+            <SeekBar
+                android:id="@+id/seekBarThree"
+                android:layout_width="535dp"
+                android:layout_height="54dp"
+                android:thumb="@drawable/car3"
+                app:layout_constraintEnd_toEndOf="@+id/seekBarOne"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/seekBarTwo"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarTwo"
+                android:layout_marginTop="5dp"/>
+
+            <SeekBar
+                android:id="@+id/seekBarFour"
+                android:layout_width="535dp"
+                android:layout_height="54dp"
+                android:thumb="@drawable/car4"
+                app:layout_constraintEnd_toEndOf="@+id/seekBarThree"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/seekBarThree"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarThree"
+                android:layout_marginTop="5dp"/>
+
+            <CheckBox
+                android:id="@+id/checkBoxOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/seekBarOne"
+                app:layout_constraintEnd_toStartOf="@+id/seekBarOne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/seekBarOne"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/checkBoxTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/seekBarTwo"
+                app:layout_constraintEnd_toStartOf="@+id/seekBarTwo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxOne"
+                app:layout_constraintTop_toTopOf="@+id/seekBarTwo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/checkBoxThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/seekBarThree"
+                app:layout_constraintEnd_toStartOf="@+id/seekBarThree"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxOne"
+                app:layout_constraintTop_toTopOf="@+id/seekBarThree"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/checkBoxFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/seekBarFour"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxOne"
+                app:layout_constraintTop_toTopOf="@+id/seekBarFour"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
