@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -35,6 +36,7 @@
                     android:background="@color/header"
                     android:gravity="center"
                     android:text="True Random Number Generator"
+                    android:textColor="@color/input"
                     android:textSize="30sp" />
             </LinearLayout>
 
@@ -54,6 +56,7 @@
                     android:gravity="left|center"
                     android:padding="10dp"
                     android:text="Min:"
+                    android:textColor="@color/input"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,6 +70,7 @@
                     android:hint="Min"
                     android:inputType="number"
                     android:padding="10dp"
+                    android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="@+id/textView3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.217"
@@ -84,6 +88,7 @@
                     android:gravity="left|center"
                     android:padding="10dp"
                     android:text="Max:"
+                    android:textColor="@color/input"
                     app:layout_constraintStart_toStartOf="@+id/textView3"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -94,6 +99,7 @@
                     android:background="@drawable/input_border"
                     android:ems="10"
                     android:hint="Max"
+                    android:textColor="@color/black"
                     android:inputType="number"
                     android:padding="10dp"
                     app:layout_constraintBottom_toBottomOf="@+id/textView5"
@@ -122,6 +128,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="20dp"
                     android:text="Result:"
+                    android:textColor="@color/input"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/buttonGenerator" />
 

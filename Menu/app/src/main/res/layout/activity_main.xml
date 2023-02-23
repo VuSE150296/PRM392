@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonSetColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="SET COLOR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="POPUP"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSetColor"
+        app:layout_constraintStart_toStartOf="@+id/buttonSetColor"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSetColor" />
+
+    <Button
+        android:id="@+id/buttonGoodbye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="GOODBYE"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPopup"
+        app:layout_constraintStart_toStartOf="@+id/buttonPopup"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPopup" />
+
+    <Button
+        android:id="@+id/buttonDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="SHOW DEMO DIALOG"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGoodbye"
+        app:layout_constraintStart_toStartOf="@+id/buttonGoodbye"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoodbye" />
+
+    <Button
+        android:id="@+id/buttonComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="SHOW COMMENT DIALOG"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDemo"
+        app:layout_constraintStart_toStartOf="@+id/buttonDemo"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDemo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,10 +14,22 @@
             android:id="@+id/listViewFood"
             android:layout_width="match_parent"
             android:layout_height="400dp"
+            android:background="@color/white"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="1dp">
+            tools:layout_editor_absoluteX="1dp" />
 
-        </ListView>
+        <TextView
+            android:id="@+id/textViewChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Món đã chọn"
+            android:textColor="@color/textView_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listViewFood" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,30 +46,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="10dp"
-                android:backgroundTint="@color/button_background"
+                android:background="@drawable/button_background"
+                android:drawableLeft="@drawable/return1"
+                android:drawableTint="@color/white"
                 android:text="Trở về"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonOrder"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
-                android:backgroundTint="@color/button_background"
-                android:text="Đặt món"
-                android:textColor="@color/black" />
+                android:background="@drawable/button_background"
+                android:drawableLeft="@drawable/cooking"
+                android:text="Chọn đồ uống"
+                android:textColor="@color/white" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewChoose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:padding="10dp"
-            android:text="Món đã chọn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listViewFood" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

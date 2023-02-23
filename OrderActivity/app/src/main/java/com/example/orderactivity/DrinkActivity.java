@@ -20,7 +20,7 @@ public class DrinkActivity extends AppCompatActivity implements View.OnClickList
     DrinkAdapter adapter;
     DrinkItems drinkItems;
     Button btnBack, btnOrder;
-    String choose, getFood;
+    String choose, getFood,getDrink;
     Intent intent;
 
     @Override
@@ -42,6 +42,7 @@ public class DrinkActivity extends AppCompatActivity implements View.OnClickList
                 drinkItems = drinkList.get(position);
                 choose = drinkItems.getDrinkName();
                 tvChoose.setText(choose);
+                view.setSelected(true);
             }
         });
     }
@@ -55,6 +56,7 @@ public class DrinkActivity extends AppCompatActivity implements View.OnClickList
 
         intent = getIntent();
         getFood = intent.getStringExtra("food");
+        getDrink=intent.getStringExtra("drink");
 
         drinkList = new ArrayList<>();
 
@@ -79,6 +81,8 @@ public class DrinkActivity extends AppCompatActivity implements View.OnClickList
 
     private void Back() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("food", getFood);
+        intent.putExtra("drink", getDrink);
         startActivity(intent);
         finish();
     }

@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void orderFood() {
         Intent intent = new Intent(this, FoodActivity.class);
+        intent.putExtra("food", food);
         intent.putExtra("drink", drink);
         startActivity(intent);
         finish();
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void orderDrink() {
         Intent intent = new Intent(this, DrinkActivity.class);
         intent.putExtra("food", food);
+        intent.putExtra("drink", drink);
         startActivity(intent);
         finish();
     }

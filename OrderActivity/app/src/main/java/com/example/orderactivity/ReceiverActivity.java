@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ReceiverActivity extends AppCompatActivity {
     private String food, drink;
-    Intent getIntent, sendIntent;
+    Intent getIntent, sendIntentToMain,sendIntentToFood,sendIntentToDrink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,9 @@ public class ReceiverActivity extends AppCompatActivity {
         food = getIntent.getStringExtra("food");
         drink = getIntent.getStringExtra("drink");
 
-        sendIntent = new Intent(this, MainActivity.class);
+        sendIntentToMain = new Intent(this, MainActivity.class);
+        sendIntentToFood = new Intent(this, FoodActivity.class);
+        sendIntentToDrink = new Intent(this, DrinkActivity.class);
         Bundle bundle = new Bundle();
 
         if (food != null && drink != null) {
@@ -25,23 +27,26 @@ public class ReceiverActivity extends AppCompatActivity {
             bundle.putString("foodFromReceiver", food);
             bundle.putString("drinkFromReceiver", drink);
 
-            sendIntent.putExtras(bundle);
-            startActivity(sendIntent);
+            sendIntentToMain.putExtras(bundle);
+            startActivity(sendIntentToMain);
             finish();
         } else if (food != null) {
 
             bundle.putString("foodFromReceiver", food);
 
-            sendIntent.putExtras(bundle);
-            startActivity(sendIntent);
+            sendIntentToMain.putExtras(bundle);
+            startActivity(sendIntentToMain);
             finish();
         } else if (drink != null) {
 
             bundle.putString("drinkFromReceiver", drink);
 
-            sendIntent.putExtras(bundle);
-            startActivity(sendIntent);
+            sendIntentToMain.putExtras(bundle);
+            startActivity(sendIntentToMain);
             finish();
+        }
+        else{
+            startActivity(sendIntentToMain);
         }
     }
 }

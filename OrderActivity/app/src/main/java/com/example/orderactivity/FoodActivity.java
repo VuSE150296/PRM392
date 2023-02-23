@@ -20,7 +20,7 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
     FoodAdapter adapter;
     Button btnBack, btnOrder;
     FoodItems foodItems;
-    String choose, getDrink;
+    String choose, getDrink,getFood;
     Intent intent;
 
     @Override
@@ -42,6 +42,7 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
                 foodItems = foodList.get(position);
                 choose = foodItems.getFoodName();
                 tvChoose.setText(choose);
+                view.setSelected(true);
             }
         });
     }
@@ -55,6 +56,7 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
 
         intent = getIntent();
         getDrink = intent.getStringExtra("drink");
+        getFood=intent.getStringExtra("food");
 
         foodList = new ArrayList<>();
 
@@ -71,7 +73,6 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("food", choose);
         intent.putExtra("drink", getDrink);
-        intent.putExtras(intent);
         startActivity(intent);
         finish();
 
@@ -79,6 +80,8 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
 
     private void Back() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("food", getFood);
+        intent.putExtra("drink", getDrink);
         startActivity(intent);
         finish();
     }
